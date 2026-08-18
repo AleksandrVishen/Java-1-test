@@ -1,15 +1,11 @@
 public class BankAccountApp {
     public static void main(String[] args) {
 
-        BankAccount standardAccount = new BankAccount("Klara", 5000, false);
-        SavingsAccount savingsAccount = new SavingsAccount("Artem", 6000, 5);
 
-        printAccountSummary(standardAccount);
-        printAccountSummary(savingsAccount);
-
-        BankAccount polymorphicReference = savingsAccount;
-        System.out.println(polymorphicReference.getAccountType());
-        polymorphicReference.printInfo();
+        BankAccount first = new DebitAccount("Klara", 5000);
+        BankAccount second = new SavingsAccount("Artem", 6000, 10);
+        printAccountSummary(first);
+        printAccountSummary(second);
 
     }
 

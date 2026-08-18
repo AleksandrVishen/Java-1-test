@@ -1,12 +1,11 @@
-public class BankAccount {
+public abstract class BankAccount {
+
     private String ownerName;
     private double balance;
     private boolean blocked;
     private static int accountsCreated = 0;
 
-    public String getAccountType() {
-        return "STANDARD";
-    }
+    public abstract String getAccountType();
 
     public static int getAccountsCreated() {
         return accountsCreated;
