@@ -3,20 +3,10 @@ public class BankAccountApp {
 
         System.out.println(BankAccount.getAccountsCreated());
         BankAccount firstAcc = new BankAccount("Klara", 5000, false);
+        SavingsAccount saveMoneyAcc = new SavingsAccount("Artem", 6000, 5);
+        saveMoneyAcc.deposit(6000);
+        System.out.println(saveMoneyAcc.getBalance());
+        System.out.println(saveMoneyAcc.calculateYearlyInterest());
         System.out.println(BankAccount.getAccountsCreated());
-        BankAccount secondAcc = new BankAccount("Rich", 80000);
-        BankAccount thirdAcc = new BankAccount("Poor");
-        System.out.println(BankAccount.getAccountsCreated());
-
-        firstAcc.deposit(500);
-        firstAcc.deposit(500, "Возврат долга");
-
-        secondAcc.deposit(500, "Возврат долга");
-
-        thirdAcc.block();
-        thirdAcc.deposit(500);
-        thirdAcc.deposit(500, "Возврат долга");
-
-
     }
 }
