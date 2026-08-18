@@ -1,4 +1,6 @@
-public class SavingsAccount extends BankAccount {
+public class SavingsAccount
+        extends BankAccount
+        implements InterestBearing {
     private double annualRatePercent;
 
     public SavingsAccount(String ownerName, double balance, double annualRatePercent) {
@@ -6,10 +8,12 @@ public class SavingsAccount extends BankAccount {
         this.annualRatePercent = annualRatePercent;
     }
 
+    @Override
     public double getAnnualRatePercent() {
         return annualRatePercent;
     }
 
+    @Override
     public double calculateYearlyInterest() {
         return getBalance() * annualRatePercent / 100.0;
     }
