@@ -14,5 +14,15 @@ public class SavingsAccount extends BankAccount {
         return getBalance() * annualRatePercent / 100.0;
     }
 
+    @Override
+    public String getAccountType() {
+        return "SAVINGS";
+    }
+
+    @Override
+    public void printInfo() {
+        super.printInfo();
+        System.out.println("Годовая ставка: " + annualRatePercent + "%");
+    }
 
 }

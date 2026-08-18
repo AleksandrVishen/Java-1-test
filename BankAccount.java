@@ -4,6 +4,10 @@ public class BankAccount {
     private boolean blocked;
     private static int accountsCreated = 0;
 
+    public String getAccountType() {
+        return "STANDARD";
+    }
+
     public static int getAccountsCreated() {
         return accountsCreated;
     }
